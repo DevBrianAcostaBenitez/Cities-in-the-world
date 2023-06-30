@@ -1,5 +1,6 @@
 *{
     font-family: Roboto;
+    overflow:hidden
 }
 .custom-bg{
     background-color: rgb(156, 154, 154);
