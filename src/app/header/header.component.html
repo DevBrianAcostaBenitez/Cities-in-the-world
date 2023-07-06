@@ -1,13 +1,28 @@
 <div>
-    <div class= "d-flex p-2 mt-4 justify-content-between bg-dark  text-light">
-    <h1 class="flex-item ml-3" >cities in the world</h1>
-    <div class= "flex-item d-flex mt-3">
-        <p class="flex-item">Home-</p>
-        <p class="flex-item">About-</p>
-        <p class="flex-item">Contact</p>
+    <div class="d-flex p-2 mt-4 justify-content-between bg-dark text-light">
+        <h1 class="flex-item ml-3 hover-effect">
+            cities in the world
+        </h1>
+        <div class="flex-item d-flex mt-3">
+            <p class="flex-item home hover-effect"
+               (mouseenter)="onMouseEnterHome()"
+               (mouseleave)="onMouseLeaveHome()">Home-</p>
+            <p class="flex-item about hover-effect"
+               (mouseenter)="onMouseEnterAbout()"
+               (mouseleave)="onMouseLeaveAbout()">About-</p>
+            <p class="flex-item contact hover-effect"
+               (mouseenter)="onMouseEnterContact()"
+               (mouseleave)="onMouseLeaveContact()">Contact</p>
+        </div>
     </div>
+    <div class="d-flex justify-content-center align-items-center custom-bg w-100 p-5 d-inline-block">
+        <h1 class="flex-item">
+            The Most Popular City
+        </h1>
     </div>
-    <div class="d-flex justify-content-center align-items-center custom-bg w-100 p-5 d-inline-block ">
-        <h1 class="flex-item ">The Most Popular City</h1>
+    <div class="d-flex justify-content-center align-items-center  d-inline-block">
+    <span class="message homeMessage" *ngIf="showHomeMessage">You are already at home</span>
+    <span class="message aboutMessage" *ngIf="showAboutMessage">This is a website about cities</span>
+    <span class="message contactMessage" *ngIf="showContactMessage">Number: 123456789</span>
     </div>
 </div>
